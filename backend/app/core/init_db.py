@@ -3,10 +3,9 @@ from contextlib import asynccontextmanager
 from fastapi_users.exceptions import UserAlreadyExists
 from pydantic import EmailStr
 
-from app.core.config import settings
-from app.core.db import get_async_session
-from app.core.user import get_user_db, get_user_manager
-from app.schemas.user import UserCreate
+from backend.app.core.db import get_async_session
+from backend.app.core.user import get_user_db, get_user_manager
+from backend.app.schemas.user import UserCreate
 
 get_async_session_context = asynccontextmanager(get_async_session)
 get_user_db_context = asynccontextmanager(get_user_db)

@@ -2,10 +2,9 @@ from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
 
-from app.api.routers import main_router
-from app.internal.admin import admin
-from app.core.config import settings
-from app.core.init_db import create_user
+from backend.app.api.routers import main_router
+from backend.app.core.config import settings
+from backend.app.core.init_db import create_user
 
 
 @asynccontextmanager
